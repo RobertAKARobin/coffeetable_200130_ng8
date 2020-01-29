@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 
-@NgModule({
+export const appModuleConfig = {
   declarations: [
     AppComponent
   ],
@@ -20,6 +20,8 @@ import { reducers, metaReducers } from './reducers';
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
-})
+  bootstrap: [AppComponent],
+};
+
+@NgModule(appModuleConfig)
 export class AppModule { }
